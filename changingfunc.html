@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--This one is done for onclick button event -->
+    <title>Change Text Example</title>
+</head>
+<body>
+    <h1 id="one">Hello</h1>
+    <p id="two">This is the one need to modify</p>
+    <button onclick="change()">Check out this!!!</button>
+
+    <script>
+        var none = document.getElementById("one");
+        var nope = document.getElementById("two");
+
+        function change() {
+            none.textContent = "Bye";
+            nope.textContent = "Your Modification Works!!!";
+        }
+    </script>
+</body>
+</html>
