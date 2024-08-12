@@ -1,12 +1,12 @@
 <html>
 <head>
-    <h1> This is function of random number Game!</h1>
+    <h1> This is a Addition Function!!!</h1>
 </head>
 <body>
 <input id = "Num1">    
 <input id = "Num2">
-
-<button id = "res" onclick="add()"> Click here for the Result!!!</button>
+<button onclick="reflect()">Add</button>
+<p id = "res">Result!!!</p>
 
 <script>
      var number1 = document.getElementById('Num1')
@@ -14,11 +14,16 @@
 
      var added = document.getElementById('res')
 
-     function add()
-     {
-        added = number1 + number2
-     }
-     return(added)
+     var num1 = Number(number1.value)
+
+     var num2 = Number(number2.value)
+
+
+    var total =  num1 + num2
+    function reflect(){ 
+    console.log(total) 
+    }
+    
      
 </script>
 
