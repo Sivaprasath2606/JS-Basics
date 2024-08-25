@@ -1,48 +1,25 @@
 <!DOCTYPE html>
 <h1> Guess the number!!!</h1>
-<input id = "Guessnumber">
-<button > click!!! </button>
-<p id ="result" onclick = "now"> Check you are Right/Wrong "/</p>
+<input id="Guessnumber">
+<button onclick="now()">click!!!</button>
+<p id="result">Check if you are Right/Wrong</p>
 
 <body>
 <script>
-var number = document.getElementById("Guessnumber")
-var moment = document.getElementById("result")
-var randomnumber = Math.floor((Math.random()*10) +1)
+var number = document.getElementById("Guessnumber");
+var moment = document.getElementById("result");
+var randomnumber = Math.floor((Math.random() * 10) + 1);
 
-if (number == randomnumber){
-    moment = "You are Right :)"
-}else{
-    moment = "You are Wrong :("
+function now() {
+    // Convert the input value to an integer for comparison
+    if (parseInt(number.value) === randomnumber) {
+        moment.innerText = "You are Right :)"; // Update the text content
+    } else {
+        moment.innerText = "You are Wrong :("; // Update the text content
+    }
 }
 
-function now()
-{
-    return moment;
-}
-
+// The return statement is not needed here, so it is removed.
 </script>
-
-
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
