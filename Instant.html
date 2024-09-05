@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+<title> Instant Displaying</title>
+</head>
+<body>
+<input id="inputbox" onkeyup="update()">
+<h1 id="result"> This will be displayed instantly</h1>
+<script>
+    let inputbox = document.getElementById("inputbox");
+    let result = document.getElementById("result")
+
+    function update()
+    {
+        result.textContent = inputbox.value 
+    }
+
+
+
+
+</script>
+
+</body>
+
+</html>

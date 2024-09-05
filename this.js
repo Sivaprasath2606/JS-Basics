@@ -36,7 +36,10 @@ let laptop1 = {
     
     function func1(callback)
     {
-        setTimeout(() =>{ console.log("Task1"),callback()}, 5000)
+        setTimeout(() =>{ 
+            console.log("Task1"),
+            callback()
+        }, 5000)
     }
     
     function func2(){
@@ -48,3 +51,15 @@ let laptop1 = {
     }
     
     func1(func2)
+
+    // Closure in Javascript
+
+    function outer()
+    {
+        const msg = "Hello"
+        function inner(){
+            console.log(msg)
+        }
+        inner()
+    }
+    outer()
