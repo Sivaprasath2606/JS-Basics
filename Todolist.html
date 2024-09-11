@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Todo list
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            background-color: rgb(0, 166, 255);
+        }
+
+        #input {
+            border: 2px solid #f0e68c;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 250px; /* Make the notes square-ish */
+            height: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            display: grid; /* Makes the ul a grid container */
+            grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+            grid-gap: 20px; /* Adds space between grid items (notes) */
+            list-style-type: none; /* Removes bullet points */
+            padding: 0;
+        }
+
+        li {
+            border: 2px solid #f0e68c;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 250px; /* Make the notes square-ish */
+            height: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        li button {
+            background-color: #ff6347;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        li button:hover {
+            background-color: #e53d2b;
+        }
+    </style>
+
+</head>
+<body>
+<input id="input">
+<button onclick="add()">+</button>
+<ul id="unord">
+<li>
+    hello
+    <button onclick="DeleteItem(event)">
+        X
+    </button>
+</li>
+
+</ul>
+
+
+<script>
+var unl = document.getElementById("unord")
+const colors = ["#ffb6c1", "#add8e6", "#90ee90", "#ffdead", "#ffdab9", "#e6e6fa", "#fffacd", "#d3ffce"];
+function add(){
+    var inputBox = document.getElementById("input")
+    var lest = document.createElement("li")
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    lest.innerHTML = inputBox.value + "<button onclick = 'DeleteItem(event)'>X</button>";
+    lest.style.backgroundColor = randomColor;  
+    unl.append(lest)
+    inputBox.value = "";
+}
+
+function DeleteItem(event)
+{
+    event.target.parentElement.remove()
+}
+
+</script>
+
+
+</body>
+
+
+</html>

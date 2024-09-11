@@ -63,3 +63,16 @@ let laptop1 = {
         inner()
     }
     outer()
+
+
+
+    // Recursion 
+    function fib(n)
+{
+    if(n < 2)
+    {
+        return n;
+    }
+    return fib(n-1) + fib(n-2)
+}
+cconsole.log(fib(5)) //8
